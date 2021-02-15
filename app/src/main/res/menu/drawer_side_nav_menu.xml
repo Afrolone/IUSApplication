@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/studentFragment"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/certificateFragment"
+        android:title="Student certificate"/>
+
+    <item
+        android:id="@+id/calendarFragment"
+        android:title="Academic calendar" />
+
+    <item
+        android:id="@+id/scheduleFragment"
+        android:title="Course schedule" />
+
+    <item
+        android:id="@+id/mobilityFragment"
+        android:title="Open mobility calls" />
+
+</menu>

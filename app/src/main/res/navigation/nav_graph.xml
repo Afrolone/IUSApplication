@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studentFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.afrolone.iusapp.ui.login.LoginFragment"
+        android:label="Log In" >
+        <action
+            android:id="@+id/action_loginFragment_to_studentFragment"
+            app:destination="@id/studentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.afrolone.iusapp.ui.student.StudentFragment"
+        android:label="Student"
+        tools:layout="@layout/fragment_student" >
+        <action
+            android:id="@+id/action_studentFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="com.afrolone.iusapp.ui.course.CourseFragment"
+        android:label="Course"
+        tools:layout="@layout/fragment_course" >
+        <argument
+            android:name="courseIndexArgument"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.afrolone.iusapp.ui.calendar.CalendarFragment"
+        android:label="Academic Calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/certificateFragment"
+        android:name="com.afrolone.iusapp.ui.certificate.CertificateFragment"
+        android:label="Certificate Application"
+        tools:layout="@layout/fragment_certificate" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.afrolone.iusapp.ui.schedule.ScheduleFragment"
+        android:label="Course Schedule"
+        tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/mobilityFragment"
+        android:name="com.afrolone.iusapp.ui.mobility.MobilityFragment"
+        android:label="Erasmus Mobility"
+        tools:layout="@layout/fragment_mobilty" />
+</navigation>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.course.CourseFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/courseInfoContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toTopOf="@id/gradesRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/courseCodeRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/courseNameRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <TextView
+                android:id="@+id/courseCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Course code:"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+            <TextView
+                android:id="@+id/courseCodeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:text="TextView"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/courseNameRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/courseStaffRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courseCodeRow">
+
+            <TextView
+                android:id="@+id/courseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course name:"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+            <TextView
+                android:id="@+id/courseNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="TextView"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/courseStaffRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/yidRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courseNameRow">
+
+            <TextView
+                android:id="@+id/courseStaff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Staff:"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+            <TextView
+                android:id="@+id/courseStaffTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="TextView"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/yidRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/courseFinalGradeRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courseStaffRow">
+
+            <TextView
+                android:id="@+id/yid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YID:"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+            <TextView
+                android:id="@+id/yidTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="TextView"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/courseFinalGradeRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/letterGradeRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yidRow">
+
+            <TextView
+                android:id="@+id/courseFinalGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Final grade:"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+            <TextView
+                android:id="@+id/courseFinalGradeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="TextView"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/letterGradeRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/semesterNameRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courseFinalGradeRow">
+
+            <TextView
+                android:id="@+id/letterGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Letter grade:"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+            <TextView
+                android:id="@+id/letterGradeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="TextView"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/semesterNameRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/letterGradeRow">
+
+            <TextView
+                android:id="@+id/semesterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Semester name:"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+            <TextView
+                android:id="@+id/semesterNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="TextView"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/material_on_background_emphasis_high_type" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gradesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/courseInfoContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
