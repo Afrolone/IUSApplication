@@ -30,7 +30,12 @@ class CourseAdapter(
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
         viewHolder.specialtv.text = courses[position].courseName
-        viewHolder.letterGradetv.text = courses[position].letterGrade.subSequence(0,2).toString() //.subSequence(0,1).trim()
+        if (courses[position].letterGrade.isBlank()){
+            viewHolder.letterGradetv.text = ""
+        } else {
+            viewHolder.letterGradetv.text = courses[position].letterGrade.subSequence(0,2).toString() //.subSequence(0,1).trim()
+        }
+
     }
 
     /*
